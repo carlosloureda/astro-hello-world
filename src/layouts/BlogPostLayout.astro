@@ -1,14 +1,10 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import Page from "../components/Page.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<html>
-  <Navigation />
-  <h1>{frontmatter.title}</h1>
+<Page pageTitle={frontmatter.title}>
   <h2>Post author: {frontmatter.author}</h2>
   <p>
     {frontmatter.description}<p>
@@ -17,5 +13,4 @@ const { frontmatter } = Astro.props;
       <!-- ... -->
     </p>
   </p>
-  <Footer />
-</html>
+</Page>
