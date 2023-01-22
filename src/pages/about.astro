@@ -1,5 +1,6 @@
 ---
-import Page from "../components/Page.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
 const pageTitle = "About Me";
 const identity = {
   firstName: "Carlos",
@@ -19,7 +20,7 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<Page pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle}>
   <style define:vars={{ skillColor, fontWeight, textCase }}>
     h1 {
       color: purple;
@@ -73,4 +74,4 @@ const textCase = "uppercase";
       <p>My goal is not 3 days.</p>
     )
   }
-</Page>
+</BaseLayout>

@@ -1,10 +1,10 @@
 ---
-import Page from "../components/Page.astro";
+import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<Page pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title}>
   <h2>Post author: {frontmatter.author}</h2>
   <p>
     {frontmatter.description}<p>
@@ -13,4 +13,4 @@ const { frontmatter } = Astro.props;
       <!-- ... -->
     </p>
   </p>
-</Page>
+</BaseLayout>
