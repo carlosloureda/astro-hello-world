@@ -12,16 +12,17 @@ const identity = {
 const skills = ["ReactJS", "TypeScript", "NodeJS", "Astro", "Remix"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "navy";
+const skillColorDark = "#ff751a";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style define:vars={{ skillColor, fontWeight, textCase }}>
+  <style define:vars={{ skillColor, fontWeight, textCase, skillColorDark }}>
     h1 {
       color: purple;
       font-size: 4rem;
@@ -30,6 +31,10 @@ const textCase = "uppercase";
       color: var(--skillColor);
       font-weight: var(--fontWeight);
       text-transform: var(--textCase);
+    }
+
+    :global(.dark) .skill {
+      color: var(--skillColorDark);
     }
   </style>
   <h2>... and my new Astro site!</h2>
